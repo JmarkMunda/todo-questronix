@@ -1,0 +1,19 @@
+.card {
+  background-color: rgb(201, 201, 201);
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: "center";
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+.details {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+}

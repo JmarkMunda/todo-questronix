@@ -5,7 +5,7 @@ import { TodoType } from "./components/Todo/types";
 import Modal from "./components/Modal";
 
 function App() {
-  const [todos, setTodos] = useState<TodoType[]>([{ id: 1, name: "John" }]);
+  const [todos, setTodos] = useState<TodoType[]>([]);
   const [inputValue, setInputValue] = useState("");
   const [editId, setEditId] = useState<number | null>(null);
   const [showModal, setShowModal] = useState(false);
@@ -49,25 +49,24 @@ function App() {
 
   return (
     <>
-      <h1>Todo List</h1>
-      <div>
-        <button
-          style={{
-            padding: 16,
-            background: "green",
-            color: "white",
-          }}
-          onClick={() => setShowModal(true)}>
-          Add
-        </button>
+      {/* HEADER */}
+      <div className="header">
+        <h1>Todo List</h1>
+        <div>
+          <button className="add-btn" onClick={() => setShowModal(true)}>
+            Add
+          </button>
+        </div>
       </div>
 
+      {/* LIST */}
       <TodoList
         todos={todos}
         handleEdit={handleEdit}
         handleDelete={handleDelete}
       />
 
+      {/* MODAL */}
       {showModal && (
         <Modal
           editId={editId}

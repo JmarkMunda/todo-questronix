@@ -17,3 +17,12 @@
 .buttons {
   display: flex;
 }
+
+.button {
+  margin-right: 0.5rem;
+}
+
+.button:hover {
+  background: rgb(0, 0, 0);
+  color: white;
+}

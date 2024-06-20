@@ -8,8 +8,12 @@ const Todo = ({ item, handleEdit, handleDelete }: Prop) => {
         <p>{item.name} </p>
       </div>
       <div className="buttons">
-        <button onClick={() => handleEdit(item.id)}>Edit</button>
-        <button onClick={() => handleDelete(item.id)}>Delete</button>
+        <button className="button" onClick={() => handleEdit(item.id)}>
+          Edit
+        </button>
+        <button className="button" onClick={() => handleDelete(item.id)}>
+          Delete
+        </button>
       </div>
     </div>
   );
